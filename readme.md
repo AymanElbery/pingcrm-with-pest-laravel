@@ -1,16 +1,16 @@
-<!-- # Ping CRM
+# Ping CRM
 
-A demo application to illustrate how Inertia.js works.
+Pest is the new kid on the block when it comes to PHP testing frameworks. It has gained popularity quickly thanks to its modern approach, gorgeous output and focus on developer experience.
 
-![](https://raw.githubusercontent.com/inertiajs/pingcrm/master/screenshot.png)
+![](https://pestphp.com/assets/img/small-logo.gif)
 
 ## Installation
 
 Clone the repo locally:
 
 ```sh
-git clone https://github.com/inertiajs/pingcrm.git pingcrm
-cd pingcrm
+git clone https://github.com/AymanElbery/pingcrm-with-pest-laravel.git
+cd pingcrm-with-pest-laravel
 ```
 
 Install PHP dependencies:
@@ -22,7 +22,7 @@ composer install
 Install NPM dependencies:
 
 ```sh
-npm ci
+npm install
 ```
 
 Build assets:
@@ -43,7 +43,7 @@ Generate application key:
 php artisan key:generate
 ```
 
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
+Create an SQLite database.
 
 ```sh
 touch database/database.sqlite
@@ -61,21 +61,21 @@ Run database seeder:
 php artisan db:seed
 ```
 
-Run the dev server (the output will give the address):
+Install Pest:
 
 ```sh
-php artisan serve
+composer require pestphp/pest-plugin-laravel --dev
+php artisan pest:install
 ```
 
-You're ready to go! Visit Ping CRM in your browser, and login with:
+Install Faker plugin:
 
-- **Username:** johndoe@example.com
-- **Password:** secret
-
-## Running tests
-
-To run the Ping CRM tests, run:
-
+```sh
+composer require pestphp/pest-plugin-faker --dev
 ```
-phpunit
-``` -->
+
+You're ready to Test! 
+Just Run:
+```sh
+php artisan test
+```

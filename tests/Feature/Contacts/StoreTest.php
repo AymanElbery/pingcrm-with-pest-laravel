@@ -14,7 +14,9 @@ it('can store a contact', function () {
         'region'        => 'Test Region',
         'country'       => faker()->randomElement(['US', 'KSA']),
         'postal_code'   => faker()->postcode,
-    ])->assertRedirect('/contacts')->assertSessionHas('success', 'Contact created.');
+    ])
+        ->assertRedirect('/contacts')
+        ->assertSessionHas('success', 'Contact created.');
 
     expect(Contact::latest()->first())
         ->first_name->toBeString()->not->toBeEmpty()
