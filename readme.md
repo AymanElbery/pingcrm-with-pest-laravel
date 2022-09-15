@@ -1,4 +1,4 @@
-# Ping CRM
+<!-- # Ping CRM
 
 A demo application to illustrate how Inertia.js works.
 
@@ -78,4 +78,4 @@ To run the Ping CRM tests, run:
 
 ```
 phpunit
-```
+``` -->
