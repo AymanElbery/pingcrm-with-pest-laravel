@@ -1,8 +1,10 @@
-# Ping CRM
+# Pingcrm With Pest Laravel.
+
+![](https://pestphp.com/assets/img/small-logo.gif)
+
 
 Pest is the new kid on the block when it comes to PHP testing frameworks. It has gained popularity quickly thanks to its modern approach, gorgeous output and focus on developer experience.
 
-![](https://pestphp.com/assets/img/small-logo.gif)
 
 ## Installation
 
