@@ -3,11 +3,11 @@
 use App\Models\Contact;
 use function Pest\Faker\faker;
 
-it('can store a contact', function () {
+it('can store a contact', function ($email) {
     login()->post('/contacts',[
         'first_name'    => faker()->firstName,
         'last_name'     => faker()->lastName,
-        'email'         => faker()->email,
+        'email'         => $email,
         'phone'         => faker()->e164PhoneNumber,
         'address'       => '1 Test Street',
         'city'          => 'Test City',
@@ -27,4 +27,7 @@ it('can store a contact', function () {
         ->city->toBe('Test City')
         ->region->toBe('Test Region')
         ->country->toBeIn(['US', 'KSA']);
-});
+
+})->with([
+    'ayman.bery@gmail.com'
+]);
